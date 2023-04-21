@@ -85,12 +85,14 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      <div className="bg-black p-4 w-full flex items-center justify-center mx-auto">
-        <p className="text-white font-inter text-base font-medium ">50& OFF</p>
-        <p className="text-white font-inter text-base font-medium mx-96">
+      <div className="bg-black p-4 w-full flex items-center justify-between mx-auto">
+        <p className="text-white font-inter text-base font-medium w-36 text-center">
+          50& OFF
+        </p>
+        <p className="text-white font-inter text-base font-medium w-36 text-center">
           Free shipping and returns
         </p>
-        <p className="text-white font-inter text-base font-medium ">
+        <p className="text-white font-inter text-base font-medium w-36 text-center">
           Different payment methods
         </p>
       </div>

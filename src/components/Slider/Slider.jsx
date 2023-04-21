@@ -13,8 +13,8 @@ const Slider = () => {
   const slideIndex = useSelector(selectCurrentSlide);
 
   return (
-    <div className="relative pb-4">
-      <div>
+    <div className="relative">
+      <div className="bg-gray-900">
         {sliderData.map((item) => {
           return (
             <div
@@ -22,20 +22,21 @@ const Slider = () => {
               className={
                 parseInt(item.id) === slideIndex
                   ? "opacity-100 duration-500 ease-in-out scale-100"
-                  : "opacity-0 duration-500 ease-in-out scale-95"
+                  : "opacity-0 duration-500 ease-in-out scale-90"
               }
             >
               <div>
                 {parseInt(item.id) === slideIndex && (
                   <img
-                    className="h-[850px] w-full"
+                    className="h-[650px] w-full object-cover"
                     src={item.img}
                     alt="shoes"
+                    rel="preload"
                   ></img>
                 )}
               </div>
-              <div className="absolute top-44 mx-auto inset-x-1/4">
-                <p className="text-white text-4xl font-inter font-bold tracking-normal leading-none">
+              <div className="absolute top-44 mx-auto w-full bg-black/50 ">
+                <p className="text-white text-4xl font-inter font-bold tracking-normal leading-none w-[80%] m-auto py-2">
                   {parseInt(item.id) === slideIndex && item.text}
                 </p>
               </div>

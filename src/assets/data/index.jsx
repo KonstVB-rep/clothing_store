@@ -790,3 +790,27 @@ export const storeData = [
     price: 550,
   },
 ];
+
+export const buttons = [
+  "Hoodies",
+  "Dresses",
+  "Suits",
+  "Shoes",
+  "T-Shirts",
+  "Jeans",
+  "Jackets",
+  "Bags",
+];
+
+export const genderButtons = ["male", "female"];
+export const colorButtons = [
+  "red",
+  "green",
+  "purple",
+  "yellow",
+  "orange",
+  "blue",
+  "black",
+  "brown",
+];
+export const sizeButtons = ["S", "M", "L", "XL"];

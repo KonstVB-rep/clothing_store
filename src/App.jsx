@@ -1,12 +1,10 @@
 import "./App.css";
-import { NavBar } from "./components/NavBar";
-import { Slider } from "./components/Slider";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <Slider />
+      <Outlet />
     </div>
   );
 }
