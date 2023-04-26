@@ -9,13 +9,13 @@ export const sliderSlice = createSlice({
   name: "slider",
   initialState,
   reducers: {
-    nextSlide(state, action) {
+    nextSlide: (state, action) => {
       state.slide = action.payload > state.length - 1 ? 0 : action.payload;
     },
-    prevSlide(state, action) {
+    prevSlide: (state, action) => {
       state.slide = action.payload < 0 ? state.length - 1 : action.payload;
     },
-    dotSlide(state, action) {
+    dotSlide: (state, action) => {
       state.slide = action.payload;
     },
   },

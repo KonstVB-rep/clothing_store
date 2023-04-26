@@ -27,7 +27,7 @@ const ProductsTypePage = () => {
 
   return (
     <div>
-      <div className="pt-16 bg-blue-gray-300">
+      <div className="pt-16 bg-gradient-to-r from-cyan-200 to-cyan-500">
         <div className="px-4">
           <h1 className="text-white bg-black text-center py-4 rounded-3xl text-4xl font-inter font-bold tracking-normal leading-none">
             {type}
@@ -124,13 +124,9 @@ const ProductsTypePage = () => {
         {error ? (
           <Error />
         ) : (
-          <div className="grid grid-cols-fit justify-items-center py-8 px-4 gap-6 ">
+          <div className="grid grid-cols-fit justify-items-center py-8 px-4 gap-6">
             {products.map((product, index) => {
-              return (
-                <div key={index}>
-                  <ProductCard {...product} />
-                </div>
-              );
+              return <ProductCard key={index} {...product} />;
             })}
           </div>
         )}

@@ -2,6 +2,7 @@ import React from "react";
 import { NavBar } from "../NavBar";
 import { Slider } from "../Slider";
 import { Navigate } from "../Navigate";
+import { ProductSection } from "../ProductSection";
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <NavBar />
       <Slider />
       <Navigate />
+      <ProductSection />
     </main>
   );
 };

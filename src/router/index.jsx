@@ -1,7 +1,8 @@
 import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
 import { Main } from "../components/Main";
-import { FilterProducts } from "../components/FilterProducts";
+import { ProductsTypePage } from "../components/ProductsTypePage";
+import SingleProductCard from "../components/ProductsTypePage/SingleProductCard";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +14,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/filter/:type",
-        element: <FilterProducts />,
+        element: <ProductsTypePage />,
+      },
+      {
+        path: "/filter/:type/:id",
+        element: <SingleProductCard />,
       },
     ],
   },

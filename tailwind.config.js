@@ -6,9 +6,9 @@ module.exports = withMT({
     extend: {
       screens: {
         mobile: "480px",
+        mobile_350: "350px",
       },
       gridTemplateColumns: {
-        // Простая сетка из 16 столбцов
         fit: "repeat(auto-fit, minmax(250px, 1fr))",
       },
       fontFamily: {

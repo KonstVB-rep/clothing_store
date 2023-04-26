@@ -28,14 +28,14 @@ const Slider = () => {
               <div>
                 {parseInt(item.id) === slideIndex && (
                   <img
-                    className="h-[650px] w-full object-cover"
+                    className="h-[400px] w-full object-cover mobile:h-[650px]"
                     src={item.img}
                     alt="shoes"
                     rel="preload"
                   ></img>
                 )}
               </div>
-              <div className="absolute top-44 mx-auto w-full bg-black/50 ">
+              <div className="absolute top-24 mx-auto w-full bg-black/50 ">
                 <p className="text-white text-4xl font-inter font-bold tracking-normal leading-none w-[80%] m-auto py-2">
                   {parseInt(item.id) === slideIndex && item.text}
                 </p>
@@ -44,7 +44,7 @@ const Slider = () => {
           );
         })}
       </div>
-      <div className="flex absolute bottom-12  left-[45%]">
+      <div className="flex absolute bottom-12 w-full justify-center">
         {sliderData.map((dot, index) => {
           return (
             <div className="mr-4" key={dot.id}>
