@@ -3,6 +3,7 @@ import { Button } from "@material-tailwind/react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectSingleProduct } from "../../feature/slices/productsSlice";
 import { addToCart } from "../../feature/slices/cartSlice";
+import FavoriteIcon from "../FavoriteIcon/FavoriteIcon";
 
 const SingleProductCard = () => {
   const product = useSelector(selectSingleProduct);
@@ -21,6 +22,7 @@ const SingleProductCard = () => {
               src={product.img}
               alt={product.name}
             ></img>
+            <FavoriteIcon currentProduct={{ ...product, size, color }} />
           </div>
           <div className="w-full px-4 py-4 text-center bg-black/30 flex items-end">
             <div className="max-w-lg m-auto">

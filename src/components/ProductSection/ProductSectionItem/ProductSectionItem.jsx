@@ -46,9 +46,9 @@ const ProductSectionItem = ({ product }) => {
         </Typography>
         <Typography className="font-medium">{text}</Typography>
         <div className="flex justify-between items-center mt-4 bg-white p-2 rounded-md">
-          <Typography color="black" className="font-medium">
+          <Typography color="black" className="font-medium w-[46px]">
             size:
-            <span className="text-base font-light">{defaultSize}</span>
+            <span className="text-base font-light ml-1">{defaultSize}</span>
           </Typography>
           <Typography color="black" className="font-medium text-center">
             <span
@@ -56,7 +56,7 @@ const ProductSectionItem = ({ product }) => {
               style={{ backgroundColor: defaultColor }}
             />
           </Typography>
-          <Typography color="red" className="font-medium font-bold">
+          <Typography color="red" className="font-medium font-bold w-[46px]">
             {price}$
           </Typography>
         </div>

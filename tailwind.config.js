@@ -10,6 +10,7 @@ module.exports = withMT({
       },
       gridTemplateColumns: {
         fit: "repeat(auto-fit, minmax(250px, 1fr))",
+        fit_200: "repeat(auto-fit, minmax(200px, 1fr))",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

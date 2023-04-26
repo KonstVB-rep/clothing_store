@@ -1,24 +1,21 @@
 import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
-import { Avatar, Tooltip } from "@material-tailwind/react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Cart } from "../ Cart";
 import { selectTotalAmount } from "../../feature/slices/cartSlice";
+import { Link } from "react-router-dom";
+import FavoriteIcon from "../FavoriteIcon/FavoriteIcon";
 
 const NavBar = () => {
   const totalAmount = useSelector(selectTotalAmount);
-  // const user = useSelector((state) => state.user.user);
-  // const { name, image } = user;
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
-    // document.body.setAttribute("data-overflow", "hidden");
     setOpen(true);
   };
   const handleClose = () => {
-    // document.body.dataset.overflow = "visible";
     setOpen(false);
   };
-  const dispatch = useDispatch();
 
   return (
     <>
@@ -33,21 +30,8 @@ const NavBar = () => {
         </div>
         <div className="flex flex-col items-center mobile:flex-row gap-4">
           <div className="flex flex-row items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="#000"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
-            </svg>
-            <p className=" font-inter text-base font-medium tracking-normal leading-none text-center mr-2">
+            <FavoriteIcon tag="link" />
+            <p className="min-w-max font-medium tracking-normal leading-none text-center">
               Wish list
             </p>
           </div>
@@ -81,23 +65,6 @@ const NavBar = () => {
             <div>
               {open && <Cart openModal={open} setOpen={handleClose}></Cart>}
             </div>
-          </div>
-          <div className="flex flex-row items-center cursor-pointer pl-4">
-            {/*{image && (*/}
-            {/*  <Avatar*/}
-            {/*    src={image}*/}
-            {/*    alt="avatar"*/}
-            {/*    size="sm"*/}
-            {/*    className="mr-2"*/}
-            {/*  ></Avatar>*/}
-            {/*)}*/}
-            {/*<div>*/}
-            {/*  /!*<Tooltip content="Sign Out" placement="bottom">*!/*/}
-            {/*  /!*  <p className="font-inter text-sm font-medium tracking-normal leading-none">*!/*/}
-            {/*  /!*    Hi {name.charAt("0").toUpperCase() + name.slice(1)}*!/*/}
-            {/*  /!*  </p>*!/*/}
-            {/*  /!*</Tooltip>*!/*/}
-            {/*</div>*/}
           </div>
         </div>
       </div>

@@ -1,10 +1,9 @@
 import "./App.css";
 import { Outlet, useLocation } from "react-router-dom";
 import ButtonsNavigate from "./components/ButtonsNavigate/ButtonsNavigate";
-import React, { useEffect } from "react";
+import React from "react";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import { useDispatch } from "react-redux";
-import { getSingleProduct } from "./feature/slices/productsSlice";
+import { Footer } from "./components/Footer";
 
 function App() {
   let { pathname } = useLocation();
@@ -20,6 +19,7 @@ function App() {
       <ScrollToTop>
         <Outlet />
       </ScrollToTop>
+      <Footer />
     </div>
   );
 }

@@ -41,7 +41,6 @@ export const cartSlice = createSlice({
       },
     },
     removeFromCart: (state, action) => {
-      console.log(action.payload);
       state.amount -= state.amount > 0 ? 1 : 0;
       const idx = state.cart.findIndex((prod) => {
         return (
@@ -50,10 +49,7 @@ export const cartSlice = createSlice({
           prod.color === action.payload.color
         );
       });
-      console.log(idx);
       const product = state.cart[idx];
-
-      console.log(product);
 
       if (product) {
         product.amount = product.amount > 0 ? (product.amount -= 1) : 0;

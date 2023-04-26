@@ -67,8 +67,8 @@ const Cart = ({ openModal, setOpen }) => {
                         return <CartItem key={index} product={item} />;
                       })}
                     </div>
-                    <div className="px-4 py-6 bg-gray-900 text-white font-bold relative bottom-1">
-                      Total price of all products:
+                    <div className="px-4 py-6 bg-gray-900 text-white font-bold relative bottom-1 text-2xl">
+                      Total price:
                       <span className="ml-2">{totalPrice}$</span>
                     </div>
                   </>
