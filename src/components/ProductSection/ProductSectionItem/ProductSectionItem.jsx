@@ -13,7 +13,7 @@ import { getSingleProduct } from "../../../feature/slices/productsSlice";
 import { Link } from "react-router-dom";
 
 const ProductSectionItem = ({ product }) => {
-  const { id, img, name, text, size, price, color, type } = product;
+  const { id, img, name, size, price, color, type } = product;
 
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ const ProductSectionItem = ({ product }) => {
   const defaultColor = color[0];
 
   return (
-    <Card className="m-w-96 relative shadow-lg shadow-black bg-gray-900">
+    <Card className="max-w-sm relative shadow-lg shadow-black bg-gray-900 w-full rounded-3xl overflow-hidden">
       <Typography
         variant="h4"
         className="mb-2 absolute rotate-45 top-12 right-2 z-10 text-red-700"
@@ -30,21 +30,25 @@ const ProductSectionItem = ({ product }) => {
       </Typography>
       <CardHeader
         floated={false}
-        className="m-0 static rounded-none rounded-t-lg grow h-[500px]"
+        className="m-0 static rounded-none rounded-t-lg grow h-[400px]"
       >
         <Link
           to={`/filter/${type}/${id}`}
-          className="w-full"
+          className="w-full h-full block"
           onClick={() => dispatch(getSingleProduct(product.id))}
         >
-          <img src={img} alt={name} className="w-full h-full object-cover" />
+          <img
+            src={img}
+            alt={name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
         </Link>
       </CardHeader>
       <CardBody className="text-center text-white">
         <Typography variant="h4" className="mb-2">
           {name}
         </Typography>
-        <Typography className="font-medium">{text}</Typography>
         <div className="flex justify-between items-center mt-4 bg-white p-2 rounded-md">
           <Typography color="black" className="font-medium w-[46px]">
             size:

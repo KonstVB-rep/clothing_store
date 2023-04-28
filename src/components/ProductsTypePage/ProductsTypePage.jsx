@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import {
   Button,
   Menu,
@@ -13,8 +13,8 @@ import {
   selectFilteredProducts,
   selectError,
 } from "../../feature/slices/productsSlice";
-import ProductCard from "./ProductCard";
 import { Error } from "../Error";
+import { ProductCard } from "./ProductCard";
 
 const btnStyle =
   "text-white h-full w-full hover:bg-gray-300 hover:text-black duration-300 ease-in-out px-0 text-center mobile:w-[175px]";
@@ -24,7 +24,7 @@ const ProductsTypePage = () => {
 
   const products = useSelector(selectFilteredProducts);
   const error = useSelector(selectError);
-
+  console.log(products);
   return (
     <div>
       <div className="pt-16 bg-gradient-to-r from-cyan-200 to-cyan-500">

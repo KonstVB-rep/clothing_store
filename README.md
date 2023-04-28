@@ -18,9 +18,16 @@ You may also see any lint errors in the console.
 Used by the library:
 
     -react-router-dom;
-    -react-intersection-observer;
     -@headlessui/react;
     -tailwindcss;
     -@reduxjs/toolkit;
     -redux-persist;
     -@material-tailwind/react;
+
+
+
+[//]: # (![image]&#40;src/assets/images/frontPage.png&#41;)
+
+[//]: # (![image]&#40;src/assets/images/filterSections.png&#41;)
+
+[//]: # (![image]&#40;src/assets/images/singleProductPage.png&#41;)

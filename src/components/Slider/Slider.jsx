@@ -7,6 +7,8 @@ import {
   prevSlide,
   selectCurrentSlide,
 } from "../../feature/slices/sliderSlice";
+import { Slide } from "./SliderSection";
+import { v4 as uuidv4 } from "uuid";
 
 const Slider = () => {
   const dispatch = useDispatch();
@@ -15,34 +17,9 @@ const Slider = () => {
   return (
     <div className="relative">
       <div className="bg-gray-900">
-        {sliderData.map((item) => {
-          return (
-            <div
-              key={item.id}
-              className={
-                parseInt(item.id) === slideIndex
-                  ? "opacity-100 duration-500 ease-in-out scale-100"
-                  : "opacity-0 duration-500 ease-in-out scale-90"
-              }
-            >
-              <div>
-                {parseInt(item.id) === slideIndex && (
-                  <img
-                    className="h-[400px] w-full object-cover mobile:h-[650px]"
-                    src={item.img}
-                    alt="shoes"
-                    rel="preload"
-                  ></img>
-                )}
-              </div>
-              <div className="absolute top-24 mx-auto w-full bg-black/50 ">
-                <p className="text-white text-4xl font-inter font-bold tracking-normal leading-none w-[80%] m-auto py-2">
-                  {parseInt(item.id) === slideIndex && item.text}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+        {sliderData.map((item) => (
+          <Slide key={uuidv4()} {...item} />
+        ))}
       </div>
       <div className="flex absolute bottom-12 w-full justify-center">
         {sliderData.map((dot, index) => {

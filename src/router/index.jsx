@@ -1,9 +1,26 @@
 import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
 import { Main } from "../components/Main";
-import { ProductsTypePage } from "../components/ProductsTypePage";
-import SingleProductCard from "../components/ProductsTypePage/SingleProductCard";
-import { WishList } from "../components/WishList";
+import React, { Suspense } from "react";
+import Spinner from "../components/Spinner/Spinner";
+
+const WishList = React.lazy(() =>
+  import("../components/WishList").then((module) => ({
+    default: module.WishList,
+  }))
+);
+
+const ProductsTypePage = React.lazy(() =>
+  import("../components/ProductsTypePage").then((module) => ({
+    default: module.ProductsTypePage,
+  }))
+);
+
+const SingleProductCard = React.lazy(() =>
+  import("../components/SingleProductCard").then((module) => ({
+    default: module.SingleProductCard,
+  }))
+);
 
 const router = createBrowserRouter([
   {
@@ -15,15 +32,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/filter/:type",
-        element: <ProductsTypePage />,
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <ProductsTypePage />
+          </Suspense>
+        ),
       },
       {
         path: "/filter/:type/:id",
-        element: <SingleProductCard />,
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <SingleProductCard />
+          </Suspense>
+        ),
       },
       {
         path: "/wish_list",
-        element: <WishList />,
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <WishList />
+          </Suspense>
+        ),
       },
     ],
   },
