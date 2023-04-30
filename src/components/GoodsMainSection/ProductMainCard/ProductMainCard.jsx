@@ -9,7 +9,8 @@ import {
 import { useDispatch } from "react-redux";
 import { getSingleProduct } from "../../../feature/slices/productsSlice";
 import { Link } from "react-router-dom";
-import { ButtonAdd } from "../../Buttons/ButtonAdd";
+import { addToCart } from "../../../feature/slices/cartSlice";
+import { ButtonGlobal } from "../../Buttons/ButtonGlobal";
 
 const ProductMainCard = ({ product }) => {
   const { id, img, name, size, price, color, type } = product;
@@ -64,8 +65,13 @@ const ProductMainCard = ({ product }) => {
         </div>
       </CardBody>
       <CardFooter className="flex justify-center gap-7 pt-2">
-        <ButtonAdd
-          data={{ ...product, size: defaultSize, color: defaultColor }}
+        <ButtonGlobal
+          title="add to cart"
+          onClick={() =>
+            dispatch(
+              addToCart({ ...product, size: defaultSize, color: defaultColor })
+            )
+          }
         />
       </CardFooter>
     </Card>

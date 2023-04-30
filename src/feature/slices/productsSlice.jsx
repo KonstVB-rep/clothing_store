@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { storeData } from "../../assets/data";
 
 const initialState = {
@@ -71,11 +71,10 @@ export const {
   clearFilter,
 } = productsSlice.actions;
 
-export const selectFilteredProducts = (state) =>
-  state.products.filteredProductsType;
 export const selectError = (state) => state.products.error;
 export const selectSingleProduct = (state) => state.products.singleProduct[0];
 export const selectFavorites = (state) => state.products.favoritesProducts;
+export const selectFilters = (state) => state.products.filters;
 
 export const filteredProductByProps = (state) =>
   state.products.filteredProductsType.filter((item) => {

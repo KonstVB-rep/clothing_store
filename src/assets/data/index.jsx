@@ -99,7 +99,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["XL", "L", "M", "S"],
     color: ["black", "gray", "green"],
-    gender: "male",
+    gender: ["male"],
     price: 45,
   },
   {
@@ -110,7 +110,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["M", "L", "XL"],
     color: ["black", "red", "brown"],
-    gender: "male",
+    gender: ["male"],
     price: 55,
   },
   {
@@ -121,7 +121,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["L", "XL"],
     color: ["brown", "gray", "yellow"],
-    gender: "female",
+    gender: ["male"],
     price: 75,
   },
   {
@@ -132,7 +132,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["M", "L", "XL"],
     color: ["gray", "orange", "blue"],
-    gender: "female",
+    gender: ["female"],
     price: 25,
   },
   {
@@ -143,7 +143,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["M", "L", "XL"],
     color: ["black", "brown", "blue"],
-    gender: "female",
+    gender: ["female"],
     price: 15,
   },
   {
@@ -154,7 +154,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["M", "L", "XL"],
     color: ["gray", "purple", "yellow"],
-    gender: "female",
+    gender: ["female"],
     price: 25,
   },
   {
@@ -165,7 +165,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["M", "L", "XL"],
     color: ["black", "orange", "blue"],
-    gender: "male",
+    gender: ["male"],
     price: 25,
   },
   {
@@ -176,7 +176,7 @@ export const storeData = [
     type: "T-Shirts",
     size: ["M", "XL"],
     color: ["gray", "red", "blue"],
-    gender: "male",
+    gender: ["male"],
     price: 35,
   },
 
@@ -188,7 +188,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "L", "XL"],
     color: ["blue", "red", "green"],
-    gender: "female",
+    gender: ["female"],
     price: 85,
   },
   {
@@ -199,7 +199,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "L", "XL"],
     color: ["gray", "purple", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 95,
   },
   {
@@ -210,7 +210,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "M", "XL"],
     color: ["red", "blue", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 95,
   },
   {
@@ -221,7 +221,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "XL"],
     color: ["gray", "blue", "red"],
-    gender: "male",
+    gender: ["male"],
     price: 125,
   },
   {
@@ -232,7 +232,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "XL"],
     color: ["gray", "blue", "red"],
-    gender: "female",
+    gender: ["female"],
     price: 250,
   },
   {
@@ -243,7 +243,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "XL"],
     color: ["gray", "yellow", "blue"],
-    gender: "male",
+    gender: ["male"],
     price: 125,
   },
   {
@@ -254,7 +254,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "M", "L", "XL"],
     color: ["black", "blue"],
-    gender: "male",
+    gender: ["male"],
     price: 450,
   },
   {
@@ -265,7 +265,7 @@ export const storeData = [
     type: "Hoodies",
     size: ["S", "M", "L", "XL"],
     color: ["green", "yellow", "red"],
-    gender: "female",
+    gender: ["female"],
     price: 355,
   },
 
@@ -277,7 +277,7 @@ export const storeData = [
     type: "Shoes",
     size: ["40", "42", "44", "46"],
     color: ["black", "gray"],
-    gender: "male",
+    gender: ["male"],
     price: 200,
   },
   {
@@ -288,7 +288,7 @@ export const storeData = [
     type: "Shoes",
     size: ["40", "42", "44", "46"],
     color: ["brown", "gray"],
-    gender: "female",
+    gender: ["female"],
     price: 250,
   },
   {
@@ -299,7 +299,7 @@ export const storeData = [
     type: "Shoes",
     size: ["36", "38", "40", "42"],
     color: ["black", "gray", "blue"],
-    gender: "female",
+    gender: ["female"],
     price: 685,
   },
   {
@@ -310,7 +310,7 @@ export const storeData = [
     type: "Shoes",
     size: ["36", "38", "40", "42"],
     color: ["black", "gray"],
-    gender: "male",
+    gender: ["male"],
     price: 255,
   },
   {
@@ -321,7 +321,7 @@ export const storeData = [
     type: "Shoes",
     size: ["36", "38", "40", "42"],
     color: ["purple", "gray", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 355,
   },
   {
@@ -332,7 +332,7 @@ export const storeData = [
     type: "Shoes",
     size: ["36", "38", "40", "42"],
     color: ["purple", "gray", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 200,
   },
   {
@@ -343,7 +343,7 @@ export const storeData = [
     type: "Shoes",
     size: ["36", "38", "40", "42"],
     color: ["purple", "green", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 100,
   },
   {
@@ -354,7 +354,7 @@ export const storeData = [
     type: "Shoes",
     size: ["36", "38", "40", "42"],
     color: ["purple", "green", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 135,
   },
   {
@@ -365,7 +365,7 @@ export const storeData = [
     type: "Dresses",
     size: ["L", "XL"],
     color: ["purple", "blue", "gray"],
-    gender: "female",
+    gender: ["female"],
     price: 355,
   },
   {
@@ -376,7 +376,7 @@ export const storeData = [
     type: "Dresses",
     size: ["S", "M", "XL"],
     color: ["black", "gray", "green"],
-    gender: "female",
+    gender: ["female"],
     price: 255,
   },
   {
@@ -387,7 +387,7 @@ export const storeData = [
     type: "Dresses",
     size: ["S", "M", "XL"],
     color: ["purple", "blue", "red"],
-    gender: "female",
+    gender: ["female"],
     price: 65,
   },
   {
@@ -398,7 +398,7 @@ export const storeData = [
     type: "Dresses",
     size: ["S", "L", "XL"],
     color: ["yellow", "blue", "orange"],
-    gender: "female",
+    gender: ["female"],
     price: 185,
   },
   {
@@ -409,7 +409,7 @@ export const storeData = [
     type: "Dresses",
     size: ["S", "L", "XL"],
     color: ["yellow", "orange"],
-    gender: "female",
+    gender: ["female"],
     price: 555,
   },
   {
@@ -420,7 +420,7 @@ export const storeData = [
     type: "Dresses",
     size: ["S", "M"],
     color: ["yellow", "blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 345,
   },
   {
@@ -431,7 +431,7 @@ export const storeData = [
     type: "Dresses",
     size: ["S", "M"],
     color: ["orange", "blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 345,
   },
   {
@@ -442,7 +442,7 @@ export const storeData = [
     type: "Dresses",
     size: ["M", "L"],
     color: ["brown", "blue", "red"],
-    gender: "female",
+    gender: ["female"],
     price: 685,
   },
   {
@@ -453,7 +453,7 @@ export const storeData = [
     type: "Jeans",
     size: ["S", "M", "L"],
     color: ["blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 55,
   },
   {
@@ -464,7 +464,7 @@ export const storeData = [
     type: "Jeans",
     size: ["S", "M"],
     color: ["blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 75,
   },
   {
@@ -475,7 +475,7 @@ export const storeData = [
     type: "Jeans",
     size: ["M", "L", "XL"],
     color: ["blue", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 95,
   },
   {
@@ -486,7 +486,7 @@ export const storeData = [
     type: "Jeans",
     size: ["M", "L", "XL"],
     color: ["blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 100,
   },
   {
@@ -497,7 +497,7 @@ export const storeData = [
     type: "Jeans",
     size: ["M", "L", "XL"],
     color: ["blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 200,
   },
   {
@@ -508,7 +508,7 @@ export const storeData = [
     type: "Jeans",
     size: ["S", "L", "XL"],
     color: ["blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 200,
   },
   {
@@ -519,7 +519,7 @@ export const storeData = [
     type: "Jeans",
     size: ["M", "L", "XL"],
     color: ["blue", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 180,
   },
   {
@@ -530,7 +530,7 @@ export const storeData = [
     type: "Jeans",
     size: ["M", "L", "XL"],
     color: ["blue", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 160,
   },
   {
@@ -541,7 +541,7 @@ export const storeData = [
     type: "Jackets",
     size: ["M", "L", "XL"],
     color: ["black", "blue"],
-    gender: "male",
+    gender: ["male"],
     price: 400,
   },
   {
@@ -552,7 +552,7 @@ export const storeData = [
     type: "Jackets",
     size: ["S", "L", "XL"],
     color: ["gray", "brown"],
-    gender: "male",
+    gender: ["male"],
     price: 255,
   },
   {
@@ -563,7 +563,7 @@ export const storeData = [
     type: "Jackets",
     size: ["S", "M"],
     color: ["gray", "brown"],
-    gender: "male",
+    gender: ["male"],
     price: 300,
   },
   {
@@ -574,7 +574,7 @@ export const storeData = [
     type: "Jackets",
     size: ["S", "M", "L"],
     color: ["gray", "brown"],
-    gender: "male",
+    gender: ["male"],
     price: 185,
   },
   {
@@ -585,7 +585,7 @@ export const storeData = [
     type: "Jackets",
     size: ["S", "M", "L"],
     color: ["gray", "brown"],
-    gender: "female",
+    gender: ["female"],
     price: 185,
   },
   {
@@ -596,7 +596,7 @@ export const storeData = [
     type: "Jackets",
     size: ["S", "M", "XL"],
     color: ["gray", "brown", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 285,
   },
   {
@@ -607,7 +607,7 @@ export const storeData = [
     type: "Jackets",
     size: ["S", "M", "XL"],
     color: ["brown", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 425,
   },
   {
@@ -618,7 +618,7 @@ export const storeData = [
     type: "Jackets",
     size: ["M", "L", "XL"],
     color: ["yellow", "orange", "blue"],
-    gender: "female",
+    gender: ["female"],
     price: 335,
   },
   {
@@ -628,7 +628,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["black", "blue", "red"],
-    gender: "female",
+    gender: ["female"],
     price: 500,
   },
   {
@@ -638,7 +638,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["green", "red", "blue"],
-    gender: "male",
+    gender: ["male"],
     price: 85,
   },
   {
@@ -648,7 +648,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["brown", "blue", "orange"],
-    gender: "female",
+    gender: ["female"],
     price: 200,
   },
   {
@@ -658,7 +658,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["brown", "blue", "orange"],
-    gender: "female",
+    gender: ["female"],
     price: 25,
   },
   {
@@ -668,7 +668,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["yellow", "blue", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 40,
   },
   {
@@ -678,7 +678,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["blue", "black", "orange"],
-    gender: "female",
+    gender: ["female"],
     price: 400,
   },
   {
@@ -688,7 +688,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["blue", "black", "orange"],
-    gender: "female",
+    gender: ["female"],
     price: 355,
   },
   {
@@ -698,7 +698,7 @@ export const storeData = [
     text: "Fashion never stops. There is always the new project, the new opportunity. The important thing is to take your time and not get stressed. I just want to do what I do.",
     type: "Bags",
     color: ["blue", "green", "red"],
-    gender: "female",
+    gender: ["female"],
     price: 100,
   },
   {
@@ -709,7 +709,7 @@ export const storeData = [
     type: "Suits",
     size: ["S", "M", "L"],
     color: ["black", "gray", "orange"],
-    gender: "male",
+    gender: ["male"],
     price: 300,
   },
   {
@@ -720,7 +720,7 @@ export const storeData = [
     type: "Suits",
     size: ["S", "M", "L"],
     color: ["purple", "orange", "gray"],
-    gender: "male",
+    gender: ["male"],
     price: 400,
   },
   {
@@ -731,7 +731,7 @@ export const storeData = [
     type: "Suits",
     size: ["M", "L", "XL"],
     color: ["purple", "orange", "gray"],
-    gender: "male",
+    gender: ["male"],
     price: 200,
   },
   {
@@ -742,7 +742,7 @@ export const storeData = [
     type: "Suits",
     size: ["L", "XL"],
     color: ["brown", "orange", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 600,
   },
   {
@@ -753,7 +753,7 @@ export const storeData = [
     type: "Suits",
     size: ["L", "XL"],
     color: ["black", "blue", "red"],
-    gender: "male",
+    gender: ["male"],
     price: 750,
   },
   {
@@ -764,7 +764,7 @@ export const storeData = [
     type: "Suits",
     size: ["S", "M"],
     color: ["brown", "orange", "black"],
-    gender: "female",
+    gender: ["female"],
     price: 385,
   },
   {
@@ -775,7 +775,7 @@ export const storeData = [
     type: "Suits",
     size: ["L", "XL"],
     color: ["red", "blue", "black"],
-    gender: "male",
+    gender: ["male"],
     price: 700,
   },
   {
@@ -786,7 +786,7 @@ export const storeData = [
     type: "Suits",
     size: ["S", "M", "XL"],
     color: ["blue", "green", "brown"],
-    gender: "male",
+    gender: ["male"],
     price: 550,
   },
 ];

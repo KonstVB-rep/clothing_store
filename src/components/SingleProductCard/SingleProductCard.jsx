@@ -5,8 +5,9 @@ import {
   selectSingleProduct,
 } from "../../feature/slices/productsSlice";
 import { FavoriteIcon } from "../FavoriteIcon";
-import { ButtonAdd } from "../Buttons/ButtonAdd";
 import { useParams } from "react-router-dom";
+import { addToCart } from "../../feature/slices/cartSlice";
+import { ButtonGlobal } from "../Buttons/ButtonGlobal";
 
 const SingleProductCard = () => {
   const product = useSelector(selectSingleProduct);
@@ -92,7 +93,10 @@ const SingleProductCard = () => {
                   })}
                 </select>
               </div>
-              <ButtonAdd data={{ ...product, size, color }} />
+              <ButtonGlobal
+                title="add to cart"
+                onClick={() => dispatch(addToCart({ ...product, size, color }))}
+              />
             </div>
           </div>
         </div>

@@ -8,13 +8,13 @@ import {
   MenuList,
 } from "@material-tailwind/react";
 import { useParams } from "react-router-dom";
-import { ButtonFilter } from "../Buttons/ButtonFilter";
 import { useDispatch } from "react-redux";
 import {
   clearFilter,
   filterProductProps,
   sortByPrice,
 } from "../../feature/slices/productsSlice";
+import { ButtonGlobal } from "../Buttons/ButtonGlobal";
 
 const btnStyle =
   "text-white w-full hover:bg-gray-300 hover:text-black duration-300 ease-in-out px-0 py-2 text-center mobile:max-w-[100px] active:bg-gray-900 active:text-white";
@@ -43,16 +43,16 @@ const FilterGoods = () => {
   );
 
   return (
-    <div className="flex items-center justify-between py-8 gap-4 flex-wrap">
+    <div className="flex items-center justify-between py-4 gap-4 flex-wrap">
       <div className="flex w-full min-h-[50px] gap-2 flex-wrap">
-        <ButtonFilter
+        <ButtonGlobal
           title={"clear filters"}
           color="bg-deep-orange-500"
           onClick={clearFilterHandler}
         />
         {genderButtons.map((item, index) => {
           return (
-            <ButtonFilter
+            <ButtonGlobal
               key={index}
               title={item}
               onClick={() =>
@@ -63,7 +63,7 @@ const FilterGoods = () => {
             />
           );
         })}
-        <ButtonFilter
+        <ButtonGlobal
           title={sortPrice === "asc" ? "High Price" : "Low Price"}
           onClick={toggleSort}
         />
@@ -102,7 +102,6 @@ const FilterGoods = () => {
           <Menu>
             <MenuHandler>
               <Button
-                // disabled={type === "Bags" || type === "Shoes"}
                 size="lg"
                 variant="filled"
                 ripple={true}

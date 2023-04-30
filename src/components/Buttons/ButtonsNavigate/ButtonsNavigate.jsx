@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { clearFilter } from "../../../feature/slices/productsSlice";
 import { useDispatch } from "react-redux";
 
-const ButtonsNavigate = ({ classWrap, back = false }) => {
+const ButtonsNavigate = ({ back = false }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
