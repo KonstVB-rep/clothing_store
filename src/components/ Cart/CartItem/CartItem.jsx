@@ -56,6 +56,7 @@ const CartItem = ({ product }) => {
               color="red"
               ripple={true}
               variant="filled"
+              className="active:bg-gray-900"
             >
               Remove
             </Button>

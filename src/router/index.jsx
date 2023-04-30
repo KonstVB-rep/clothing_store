@@ -1,18 +1,13 @@
+import React, { Suspense } from "react";
 import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
 import { Main } from "../components/Main";
-import React, { Suspense } from "react";
 import Spinner from "../components/Spinner/Spinner";
+import { GoodsTypePage } from "../components/GoodsTypePage";
 
 const WishList = React.lazy(() =>
   import("../components/WishList").then((module) => ({
     default: module.WishList,
-  }))
-);
-
-const ProductsTypePage = React.lazy(() =>
-  import("../components/ProductsTypePage").then((module) => ({
-    default: module.ProductsTypePage,
   }))
 );
 
@@ -32,11 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/filter/:type",
-        element: (
-          <Suspense fallback={<Spinner />}>
-            <ProductsTypePage />
-          </Suspense>
-        ),
+        element: <GoodsTypePage />,
       },
       {
         path: "/filter/:type/:id",

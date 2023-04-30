@@ -3,9 +3,10 @@ import { storeData } from "../../assets/data";
 
 const initialState = {
   productsList: storeData,
-  filteredProducts: [],
+  filteredProductsType: [],
   favoritesProducts: [],
   singleProduct: [],
+  filters: {},
   error: false,
 };
 
@@ -13,11 +14,24 @@ export const productsSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
-    filteredProducts: (state, action) => {
-      state.filteredProducts = state.productsList.filter(
+    filterProductProps: (state, action) => {
+      state.filters[action.payload.prop] = action.payload.value;
+    },
+    filteredProductsType: (state, action) => {
+      state.filteredProductsType = state.productsList.filter(
         (product) => product.type === action.payload
       );
       state.error = false;
+    },
+    clearFilter: (state) => {
+      state.filters = {};
+    },
+    sortByPrice: (state, action) => {
+      if (action.payload === "asc") {
+        state.filteredProductsType.sort((a, b) => a.price - b.price);
+      } else {
+        state.filteredProductsType.sort((a, b) => b.price - a.price);
+      }
     },
     getSingleProduct: (state, action) => {
       state.singleProduct = state.productsList.filter(
@@ -48,13 +62,30 @@ export const productsSlice = createSlice({
   },
 });
 
-export const { filteredProducts, getSingleProduct, toggleFavorite } =
-  productsSlice.actions;
+export const {
+  filteredProductsType,
+  getSingleProduct,
+  toggleFavorite,
+  filterProductProps,
+  sortByPrice,
+  clearFilter,
+} = productsSlice.actions;
+
 export const selectFilteredProducts = (state) =>
-  state.products.filteredProducts;
+  state.products.filteredProductsType;
 export const selectError = (state) => state.products.error;
 export const selectSingleProduct = (state) => state.products.singleProduct[0];
 export const selectFavorites = (state) => state.products.favoritesProducts;
+
+export const filteredProductByProps = (state) =>
+  state.products.filteredProductsType.filter((item) => {
+    for (let key in state.products.filters) {
+      if (key && !item[key].includes(state.products.filters[key])) {
+        return false;
+      }
+    }
+    return true;
+  });
 
 const productsReducer = productsSlice.reducer;
 

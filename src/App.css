@@ -39,3 +39,7 @@ ul{
 /*  outline: none;*/
 /*  transition: all 0.2s ease-in-out;*/
 /*}*/
+
+.active{
+  background-color: indigo;
+}

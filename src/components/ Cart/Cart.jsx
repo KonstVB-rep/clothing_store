@@ -84,7 +84,7 @@ const Cart = ({ openModal, setOpen }) => {
                   </>
                 ) : (
                   <div className="text-center">
-                    <h4 className="leading-snug text-xl font-inter min-w-[300px] font-bold tracking-normal leading-none py-6 bg-gray-900 my-2 px-2 text-white">
+                    <h4 className="leading-snug text-xl font-inter min-w-[300px] font-bold tracking-normal leading-none py-6 bg-gray-900 my-2 mb-12 px-2 text-white">
                       Your bag is empty.
                       <br /> Add some products
                     </h4>

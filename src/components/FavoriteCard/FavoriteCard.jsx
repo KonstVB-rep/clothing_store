@@ -21,17 +21,14 @@ const FavoriteCard = ({ product }) => {
       <CardHeader
         floated={false}
         color="blue-gray"
-        className="m-h-[500px] grow"
+        className="m-h-[500px] grow relative"
       >
         <img src={img} alt={name} className="h-full w-full object-cover" />
-
-        <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 ">
-          <Link
-            to={`/filter/${type}/${id}`}
-            className="w-full h-full block"
-            onClick={() => dispatch(getSingleProduct(id))}
-          />
-        </div>
+        <Link
+          to={`/filter/${type}/${id}`}
+          className="absolute inset-0 bg-black/30 hover:bg-black/0 focus-visible:bg-black/0 duration-200 rounded-t-3xl hover:shadow-focus_link focus-visible:shadow-focus_link"
+          onClick={() => dispatch(getSingleProduct(id))}
+        />
         <FavoriteIcon currentProduct={{ ...product, size, color }} />
       </CardHeader>
       <CardBody className="p-2">

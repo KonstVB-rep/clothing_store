@@ -1,5 +1,5 @@
 import React from "react";
-import WishCartLine from "../WIshCartLine/WishCartLine";
+import { LogoWishCartLine } from "../LogoWishCartLine";
 
 const NavBar = () => {
   return (
@@ -9,7 +9,7 @@ const NavBar = () => {
           clothing store
         </p>
       </div>
-      <WishCartLine />
+      <LogoWishCartLine />
       <div className="bg-black p-4 w-full flex flex-col justify-center items-center justify-between mx-auto  mobile:flex-row gap-4">
         <p className="text-white font-inter text-base font-medium w-36 text-center">
           50& OFF
