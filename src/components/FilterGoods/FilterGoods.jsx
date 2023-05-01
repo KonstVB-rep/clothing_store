@@ -17,7 +17,7 @@ import {
 import { ButtonGlobal } from "../Buttons/ButtonGlobal";
 
 const btnStyle =
-  "text-white w-full hover:bg-gray-300 hover:text-black duration-300 ease-in-out px-0 py-2 text-center mobile:max-w-[100px] active:bg-gray-900 active:text-white";
+  "text-white w-full bg-blue-700 hover:bg-gray-300 hover:text-black duration-300 ease-in-out px-0 py-2 text-center mobile:max-w-[100px] active:bg-gray-900 active:text-white";
 
 const FilterGoods = () => {
   const { type } = useParams();
@@ -29,11 +29,11 @@ const FilterGoods = () => {
     let sortDirection = sortPrice === "asc" ? "desc" : "asc";
     setSortPrice(sortDirection);
     dispatch(sortByPrice(sortPrice));
-  }, [sortPrice]);
+  }, [sortPrice, dispatch]);
 
   const clearFilterHandler = useCallback(() => {
     dispatch(clearFilter());
-  }, []);
+  }, [dispatch]);
 
   const filteredHandler = useCallback(
     (filterObj) => {
@@ -47,7 +47,7 @@ const FilterGoods = () => {
       <div className="flex w-full min-h-[50px] gap-2 flex-wrap">
         <ButtonGlobal
           title={"clear filters"}
-          color="bg-deep-orange-500"
+          color="bg-red-900"
           onClick={clearFilterHandler}
         />
         {genderButtons.map((item, index) => {
@@ -64,7 +64,7 @@ const FilterGoods = () => {
           );
         })}
         <ButtonGlobal
-          title={sortPrice === "asc" ? "High Price" : "Low Price"}
+          title={sortPrice === "asc" ? "Price ▼" : "Price ▲"}
           onClick={toggleSort}
         />
         <Menu>
@@ -75,7 +75,7 @@ const FilterGoods = () => {
               ripple={true}
               className={`${btnStyle}`}
             >
-              Select a color
+              color
             </Button>
           </MenuHandler>
           <MenuList>
@@ -107,7 +107,7 @@ const FilterGoods = () => {
                 ripple={true}
                 className={`${btnStyle}`}
               >
-                Select a size
+                size
               </Button>
             </MenuHandler>
             <MenuList>

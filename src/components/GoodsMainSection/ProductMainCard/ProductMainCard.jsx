@@ -21,7 +21,7 @@ const ProductMainCard = ({ product }) => {
   const defaultColor = color[0];
 
   return (
-    <Card className="max-w-sm relative shadow-lg shadow-black bg-gray-900 w-full rounded-3xl overflow-hidden">
+    <Card className="m-auto max-w-sm relative shadow-lg shadow-black bg-gray-900 w-full rounded-3xl overflow-hidden">
       <Typography
         variant="h4"
         className="mb-2 absolute rotate-45 top-12 right-2 z-10 text-red-700"
@@ -48,10 +48,12 @@ const ProductMainCard = ({ product }) => {
         <Typography variant="h4" className="mb-2">
           {name}
         </Typography>
-        <div className="flex justify-between items-center mt-4 bg-white p-2 rounded-md">
-          <Typography color="black" className="font-medium w-[46px]">
+        <div className="flex justify-between items-center mt-4 bg-white p-2 rounded-3xl">
+          <Typography color="black" className="text-2xl">
             size:
-            <span className="text-base font-light ml-1">{defaultSize}</span>
+            <span className="text-base font-light ml-1 text-xl">
+              {defaultSize}
+            </span>
           </Typography>
           <Typography className="font-medium text-center font-semibold">
             <span
@@ -59,7 +61,10 @@ const ProductMainCard = ({ product }) => {
               style={{ backgroundColor: defaultColor, color: defaultColor }}
             ></span>
           </Typography>
-          <Typography color="red" className="font-medium font-bold w-[46px]">
+          <Typography
+            color="red"
+            className="font-medium font-bold w-[46px] text-2xl"
+          >
             {price}$
           </Typography>
         </div>

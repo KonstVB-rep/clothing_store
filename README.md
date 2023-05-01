@@ -26,8 +26,10 @@ Used by the library:
 
 
 
-[//]: # (![image]&#40;src/assets/images/frontPage.png&#41;)
+![image](src/assets/images/MainPage.webp)
 
-[//]: # (![image]&#40;src/assets/images/filterSections.png&#41;)
+![image](src/assets/images/MainPage2.webp)
 
-[//]: # (![image]&#40;src/assets/images/singleProductPage.png&#41;)
+![image](src/assets/images/TypePage.webp)
+
+![image](src/assets/images/SinglePage.webp)

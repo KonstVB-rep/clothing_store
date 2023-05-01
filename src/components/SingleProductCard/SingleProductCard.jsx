@@ -70,7 +70,7 @@ const SingleProductCard = () => {
                   </div>
                 )}
               </div>
-              <div className="pb-4">
+              <div className="pb-8">
                 <label
                   htmlFor="color"
                   className="block mb-2 text-start text-white text-sm font-medium dark:text-white"

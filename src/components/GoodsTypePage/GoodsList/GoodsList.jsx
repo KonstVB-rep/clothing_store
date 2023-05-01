@@ -7,7 +7,7 @@ const GoodsList = () => {
   const products = useSelector(filteredProductByProps);
 
   return (
-    <div className="grid grid-cols-fit justify-items-start p-4 pt-0 gap-6">
+    <div className="grid grid-cols-fit justify-items-start p-4 pt-0 gap-6 justify-center">
       {products.map((product, index) => {
         return <ProductCard key={index} {...product} />;
       })}

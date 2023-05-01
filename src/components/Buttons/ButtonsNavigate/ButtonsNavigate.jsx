@@ -16,7 +16,7 @@ const ButtonsNavigate = ({ back = false }) => {
         {back && (
           <button
             onClick={goBack}
-            className="flex justify-center items-center rounded-md text-white bg-blue-800 px-0 py-4 h-10 hover:scale-110 focus-visible:scale-110 duration-300 capitalize active:bg-transparent"
+            className="flex justify-center items-center rounded-md text-black bg-gray-300 px-0 py-4 h-10 hover:scale-110 focus-visible:scale-110 duration-300 capitalize active:bg-transparent active:text-white"
           >
             back
           </button>
@@ -27,7 +27,7 @@ const ButtonsNavigate = ({ back = false }) => {
               to={`/filter/${button}`}
               key={index}
               onClick={() => dispatch(clearFilter())}
-              className=" w-full flex justify-center items-center text-white bg-blue-300 w-24 px-0 py-4 hover:bg-white hover:text-black hover:opacity-1 duration-300 ease-in-out rounded-md h-10"
+              className=" w-full bg-blue-700 flex justify-center items-center text-white w-24 px-0 py-4 hover:bg-white hover:text-black hover:opacity-1 duration-300 ease-in-out rounded-md h-10 active:border-2 active:border-cyan-50 active:bg-black active:text-white"
             >
               {button}
             </Link>

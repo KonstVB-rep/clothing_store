@@ -24,8 +24,8 @@ const Slide = ({ id, img, text }) => {
           ></img>
         )}
       </div>
-      <div className="absolute top-24 mx-auto w-full bg-black/50 ">
-        <p className="text-white text-4xl font-inter font-bold tracking-normal leading-none w-[80%] m-auto py-2">
+      <div className="absolute top-0 mobile:top-24 mx-auto w-full bg-black/50 ">
+        <p className="text-white text-4xl font-inter font-bold text-center tracking-normal leading-none w-[80%] m-auto py-2">
           {parseInt(id) === slideIndex && text}
         </p>
       </div>

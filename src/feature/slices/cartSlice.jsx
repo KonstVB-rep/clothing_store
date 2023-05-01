@@ -17,7 +17,8 @@ export const cartSlice = createSlice({
           (prod) =>
             prod.id === action.payload.id &&
             prod.size === action.payload.size &&
-            prod.color === action.payload.color
+            prod.color === action.payload.color &&
+            prod.name === action.payload.name
         );
         if (product) {
           product.amount += 1;
@@ -38,7 +39,7 @@ export const cartSlice = createSlice({
         };
       },
     },
-    removeFromCart: (state, action) => {
+    removeOneProduct: (state, action) => {
       state.totalAmount -= state.totalAmount > 0 ? 1 : 0;
       const idx = state.cart.findIndex((prod) => {
         return (
@@ -63,10 +64,22 @@ export const cartSlice = createSlice({
       state.cart = [];
       state.totalAmount = 0;
     },
+    removeEntireProduct: (state, action) => {
+      state.cart = state.cart.filter(
+        (prod) =>
+          prod.size !== action.payload.size ||
+          prod.color !== action.payload.color ||
+          prod.name !== action.payload.name ||
+          prod.id !== action.payload.id
+      );
+
+      state.totalAmount -= action.payload.amount;
+    },
   },
 });
 
-export const { addToCart, removeFromCart, clearCart } = cartSlice.actions;
+export const { addToCart, removeOneProduct, clearCart, removeEntireProduct } =
+  cartSlice.actions;
 
 export const selectTotalAmount = (state) => state.cart.totalAmount;
 

@@ -10,8 +10,8 @@ const GoodsMainSection = () => {
           SUMMER T-Shirt SALE 30%
         </h2>
       </div>
-      <div className="grid grid-cols-fit justify-items-center py-8 px-4 gap-x-3 gap-6">
-        {storeData.slice(0, 6).map((product, index) => (
+      <div className="grid grid-cols-main justify-center py-8 px-4 gap-x-3 gap-6 bg-[#3883c2]">
+        {storeData.slice(0, 8).map((product, index) => (
           <ProductMainCard key={index} product={product} />
         ))}
       </div>

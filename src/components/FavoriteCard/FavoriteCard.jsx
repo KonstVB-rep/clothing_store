@@ -17,7 +17,7 @@ const FavoriteCard = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <Card className="w-full shadow-lg max-h-[450px]">
+    <Card className="w-full shadow-lg max-h-[550px]">
       <CardHeader
         floated={false}
         color="blue-gray"
@@ -26,7 +26,7 @@ const FavoriteCard = ({ product }) => {
         <img src={img} alt={name} className="h-full w-full object-cover" />
         <Link
           to={`/filter/${type}/${id}`}
-          className="absolute inset-0 bg-black/30 hover:bg-black/0 focus-visible:bg-black/0 duration-200 rounded-t-3xl hover:shadow-focus_link focus-visible:shadow-focus_link"
+          className="absolute inset-0 bg-black/30 hover:bg-black/0 focus-visible:bg-black/0 duration-200"
           onClick={() => dispatch(getSingleProduct(id))}
         />
         <FavoriteIcon currentProduct={{ ...product, size, color }} />

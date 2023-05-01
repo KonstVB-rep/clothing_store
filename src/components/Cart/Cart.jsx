@@ -34,7 +34,7 @@ const Cart = ({ openModal, setOpen }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className=" w-full relative w-max max-w-[800px] transform overflow-hidden rounded-2xl bg-white pt-10 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className=" w-full relative max-w-[800px] transform overflow-hidden rounded-2xl bg-white pt-10 text-left align-middle shadow-xl transition-all">
                 <button
                   className="absolute top-0 right-0 cursor-pointer hover:scale-125 focus-visible:scale-125 duration-300 w-[45px] h-[45px] outline-0 bg-white rounded-[50%]"
                   onClick={setOpen}
@@ -54,13 +54,19 @@ const Cart = ({ openModal, setOpen }) => {
                 </button>
                 {cart.length > 0 ? (
                   <>
-                    <div className="mt-2 px-4 flex flex-wrap gap-4 justify-center max-w-[800px]">
+                    <div className="mt-2 px-4 grid w-full max-w-[800px] gap-4">
                       {cart.map((item, index) => {
-                        return <CartItem key={index} product={item} />;
+                        return (
+                          <CartItem
+                            key={index}
+                            product={item}
+                            onClose={setOpen}
+                          />
+                        );
                       })}
                     </div>
                     <div className="px-4 py-6 bg-gray-900 text-white font-bold relative bottom-1 text-2xl mt-4 flex justify-between items-center gap-2">
-                      <div>
+                      <div className="p-2">
                         Total price:
                         <span className="ml-2">{totalPrice}$</span>
                       </div>

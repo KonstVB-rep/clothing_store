@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { storeData } from "../../assets/data";
 
 const initialState = {
@@ -7,7 +7,6 @@ const initialState = {
   favoritesProducts: [],
   singleProduct: [],
   filters: {},
-  error: false,
 };
 
 export const productsSlice = createSlice({
@@ -21,7 +20,6 @@ export const productsSlice = createSlice({
       state.filteredProductsType = state.productsList.filter(
         (product) => product.type === action.payload
       );
-      state.error = false;
     },
     clearFilter: (state) => {
       state.filters = {};
@@ -71,7 +69,6 @@ export const {
   clearFilter,
 } = productsSlice.actions;
 
-export const selectError = (state) => state.products.error;
 export const selectSingleProduct = (state) => state.products.singleProduct[0];
 export const selectFavorites = (state) => state.products.favoritesProducts;
 export const selectFilters = (state) => state.products.filters;
