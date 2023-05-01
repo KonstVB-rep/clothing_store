@@ -20,7 +20,7 @@ const ProductCard = ({ id, name, text, img, price, color }) => {
           className="h-full w-full object-cover"
         />
         <Link
-          to={`/filter/${type}/${id}`}
+          to={`/clothing_store/filter/${type}/${id}`}
           className="absolute inset-0 bg-black/30 hover:opacity-0 focus-visible:opacity-0 duration-200 rounded-t-2xl"
         >
           <CardBody className="absolute text-center pb-6 bg-black/50 inset-0 flex flex-col items-center justify-end ">
@@ -43,11 +43,11 @@ const ProductCard = ({ id, name, text, img, price, color }) => {
           color="gray"
           className="flex gap-1 px-2 py-1 rounded-2xl bg-white"
         >
-          {color?.map((color, index) => {
+          {color?.map((color) => {
             return (
               <i
                 className="fas fa-map-marker-alt fa-sm mt-[3px] rounded-full p-2"
-                key={index}
+                key={color}
                 style={{ backgroundColor: color }}
               ></i>
             );

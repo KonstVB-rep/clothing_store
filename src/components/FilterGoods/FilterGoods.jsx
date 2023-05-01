@@ -50,10 +50,10 @@ const FilterGoods = () => {
           color="bg-red-900"
           onClick={clearFilterHandler}
         />
-        {genderButtons.map((item, index) => {
+        {genderButtons.map((item) => {
           return (
             <ButtonGlobal
-              key={index}
+              key={item}
               title={item}
               onClick={() =>
                 filteredHandler(
@@ -79,11 +79,11 @@ const FilterGoods = () => {
             </Button>
           </MenuHandler>
           <MenuList>
-            {colorButtons.map((item, index) => {
+            {colorButtons.map((item) => {
               return (
                 <MenuItem
                   style={{ color: item }}
-                  key={index}
+                  key={item}
                   onClick={() =>
                     filteredHandler(
                       filterProductProps({ prop: "color", value: item })
@@ -111,10 +111,10 @@ const FilterGoods = () => {
               </Button>
             </MenuHandler>
             <MenuList>
-              {sizeButtons.map((item, index) => {
+              {sizeButtons.map((item) => {
                 return (
                   <MenuItem
-                    key={index}
+                    key={item}
                     onClick={() =>
                       filteredHandler(
                         filterProductProps({ prop: "size", value: item })

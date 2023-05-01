@@ -3,12 +3,12 @@ import { LogoWishCartLine } from "../LogoWishCartLine";
 import { ButtonsNavigate } from "../Buttons/ButtonsNavigate";
 import { useLocation } from "react-router-dom";
 
-const HeaderPage = () => {
+const Header = () => {
   let { pathname } = useLocation();
 
   return (
     <>
-      {pathname !== "/" && (
+      {pathname !== "/clothing_store" && (
         <div>
           <LogoWishCartLine />
           <ButtonsNavigate back={true} />
@@ -18,4 +18,4 @@ const HeaderPage = () => {
   );
 };
 
-export default HeaderPage;
+export default Header;

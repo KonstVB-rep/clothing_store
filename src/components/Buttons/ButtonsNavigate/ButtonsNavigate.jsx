@@ -24,10 +24,10 @@ const ButtonsNavigate = ({ back = false }) => {
         {buttons.map((button, index) => {
           return (
             <Link
-              to={`/filter/${button}`}
+              to={`/clothing_store/filter/${button}`}
               key={index}
               onClick={() => dispatch(clearFilter())}
-              className=" w-full bg-blue-700 flex justify-center items-center text-white w-24 px-0 py-4 hover:bg-white hover:text-black hover:opacity-1 duration-300 ease-in-out rounded-md h-10 active:border-2 active:border-cyan-50 active:bg-black active:text-white"
+              className=" w-full bg-blue-700 flex justify-center items-center text-white w-24 px-0 py-4 hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black duration-300 ease-in-out rounded-md h-10 active:border-2 active:border-cyan-50 active:bg-black active:text-white"
             >
               {button}
             </Link>

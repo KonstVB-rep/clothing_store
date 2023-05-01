@@ -59,9 +59,9 @@ const SingleProductCard = () => {
                       onChange={(e) => setSize(e.target.value)}
                       className="bg-gray-50 border border-gray-300 font-semibold text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     >
-                      {product?.size.map((item, index) => {
+                      {product?.size.map((item) => {
                         return (
-                          <option key={index} value={item}>
+                          <option key={item} value={item}>
                             {item}
                           </option>
                         );
@@ -84,9 +84,9 @@ const SingleProductCard = () => {
                   onChange={(e) => setColor(e.target.value)}
                   className="bg-gray-50 border border-gray-300 text-gray-900 font-semibold text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 >
-                  {product?.color.map((color, index) => {
+                  {product?.color.map((color) => {
                     return (
-                      <option key={index} value={color}>
+                      <option key={color} value={color}>
                         {color}
                       </option>
                     );

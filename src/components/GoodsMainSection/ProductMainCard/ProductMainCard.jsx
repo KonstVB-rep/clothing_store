@@ -39,7 +39,7 @@ const ProductMainCard = ({ product }) => {
           loading="lazy"
         />
         <Link
-          to={`/filter/${type}/${id}`}
+          to={`filter/${type}/${id}`}
           className="absolute inset-0 bg-black/30 hover:bg-black/0 focus-visible:bg-black/0 duration-200"
           onClick={() => dispatch(getSingleProduct(product.id))}
         />

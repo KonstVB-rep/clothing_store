@@ -3,6 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { CartItem } from "./CartItem";
 import { clearCart } from "../../feature/slices/cartSlice";
+import { v4 as uuidv4 } from "uuid";
 
 const Cart = ({ openModal, setOpen }) => {
   const cart = useSelector((state) => state.cart.cart);
@@ -55,10 +56,10 @@ const Cart = ({ openModal, setOpen }) => {
                 {cart.length > 0 ? (
                   <>
                     <div className="mt-2 px-4 grid w-full max-w-[800px] gap-4">
-                      {cart.map((item, index) => {
+                      {cart.map((item) => {
                         return (
                           <CartItem
-                            key={index}
+                            key={uuidv4()}
                             product={item}
                             onClose={setOpen}
                           />

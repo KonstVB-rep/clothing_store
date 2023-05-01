@@ -26,7 +26,7 @@ const CartItem = ({ product, onClose }) => {
       </h4>
       <div className="rounded-b-lg bg-black/20 flex flex-col items-center mobile:flex-row gap-4 overflow-hidden">
         <Link
-          to={`/filter/${type}/${id}`}
+          to={`filter/${type}/${id}`}
           onClick={handleClick}
           className="h-auto min-w-[190px] max-w-[190px] block py-2 pl-2"
         >
@@ -38,7 +38,7 @@ const CartItem = ({ product, onClose }) => {
         </Link>
         <div className="h-full w-full py-4 px-4 pt-0 mobile:py-4 mobile:px-2">
           <div className="h-full flex border-2 border-gray-900 bg-[lavender] rounded-2xl p-2 flex-wrap justify-start content-between items-start flex-col w-full gap-4 mobile:text-center mobile:justify-between mobile:text-center text-lg font-bold sm:flex-row sm:text-start">
-            <div className="flex flex-col items-start gap-1">
+            <div className="flex flex-col items-start gap-2">
               <p className="text-black leading-none capitalize">
                 Size:<span className="ml-2 font-medium">{size}</span>
               </p>

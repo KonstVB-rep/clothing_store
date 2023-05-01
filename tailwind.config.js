@@ -14,6 +14,7 @@ module.exports = withMT({
       },
       gridTemplateColumns: {
         fit: "repeat(auto-fit, minmax(240px, 400px))",
+        300: "repeat(auto-fit, minmax(240px, 300px))",
         main: "repeat(auto-fit, minmax(240px, 1fr))",
         nav: "repeat(auto-fit,minmax(90px, 1fr))",
       },

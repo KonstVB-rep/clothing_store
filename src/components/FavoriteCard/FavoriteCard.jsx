@@ -5,12 +5,13 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import { FavoriteIcon } from "../FavoriteIcon";
 import { useDispatch } from "react-redux";
 import { getSingleProduct } from "../../feature/slices/productsSlice";
 import { Link } from "react-router-dom";
+import { ButtonGlobal } from "../Buttons/ButtonGlobal";
+import { addToCart } from "../../feature/slices/cartSlice";
 
 const FavoriteCard = ({ product }) => {
   const { id, name, img, price, color, size, type } = product;
@@ -25,8 +26,8 @@ const FavoriteCard = ({ product }) => {
       >
         <img src={img} alt={name} className="h-full w-full object-cover" />
         <Link
-          to={`/filter/${type}/${id}`}
-          className="absolute inset-0 bg-black/30 hover:bg-black/0 focus-visible:bg-black/0 duration-200"
+          to={`/clothing_store/filter/${type}/${id}`}
+          className="absolute inset-0 bg-black/30 hover:bg-black/0 focus-visible:bg-black/0 duration-200 outline-0"
           onClick={() => dispatch(getSingleProduct(id))}
         />
         <FavoriteIcon currentProduct={{ ...product, size, color }} />
@@ -54,10 +55,11 @@ const FavoriteCard = ({ product }) => {
           </div>
         </div>
       </CardBody>
-      <CardFooter className="pt-0 pb-4">
-        <Button size="lg" fullWidth={true}>
-          Add to cart
-        </Button>
+      <CardFooter className="pt-0 pb-4 flex justify-center">
+        <ButtonGlobal
+          title="add to cart"
+          onClick={() => dispatch(addToCart(product))}
+        />
       </CardFooter>
     </Card>
   );

@@ -22,15 +22,15 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/clothing_store",
         element: <Main />,
       },
       {
-        path: "/filter/:type",
+        path: "/clothing_store/filter/:type",
         element: <GoodsTypePage />,
       },
       {
-        path: "/filter/:type/:id",
+        path: "/clothing_store/filter/:type/:id",
         element: (
           <Suspense fallback={<Spinner />}>
             <SingleProductCard />
@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/wish_list",
+        path: "/clothing_store/wish_list",
         element: (
           <Suspense fallback={<Spinner />}>
             <WishList />
