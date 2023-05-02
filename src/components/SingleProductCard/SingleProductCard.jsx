@@ -8,6 +8,7 @@ import { FavoriteIcon } from "../FavoriteIcon";
 import { useParams } from "react-router-dom";
 import { addToCart } from "../../feature/slices/cartSlice";
 import { ButtonGlobal } from "../Buttons/ButtonGlobal";
+import { NotFoundPage } from "../404";
 
 const SingleProductCard = () => {
   const product = useSelector(selectSingleProduct);
@@ -22,6 +23,10 @@ const SingleProductCard = () => {
   useEffect(() => {
     dispatch(getSingleProduct(id));
   }, [id, dispatch]);
+
+  if (!product) {
+    return <NotFoundPage />;
+  }
 
   return (
     <article className="h-full bg-blue-100 grow ">

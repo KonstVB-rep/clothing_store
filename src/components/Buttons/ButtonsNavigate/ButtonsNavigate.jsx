@@ -1,8 +1,8 @@
 import React from "react";
-import { buttons } from "../../../assets/data";
 import { Link, useNavigate } from "react-router-dom";
 import { clearFilter } from "../../../feature/slices/productsSlice";
 import { useDispatch } from "react-redux";
+import { clothingTypes } from "../../../assets/data";
 
 const ButtonsNavigate = ({ back = false }) => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const ButtonsNavigate = ({ back = false }) => {
             back
           </button>
         )}
-        {buttons.map((button, index) => {
+        {clothingTypes.map((button, index) => {
           return (
             <Link
               to={`/clothing_store/filter/${button}`}

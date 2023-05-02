@@ -8,6 +8,8 @@ import {
 import { FilterGoods } from "../FilterGoods";
 import { Spinner } from "../Spinner";
 import FiltersValue from "../FiltersValue/FiltersValue";
+import { clothingTypes } from "../../assets/data";
+import { NotFoundPage } from "../404";
 
 const GoodsList = React.lazy(() =>
   import("./GoodsList").then((module) => ({
@@ -32,6 +34,10 @@ const GoodsTypePage = () => {
       dispatch(filteredProductsType(type));
     }
   }, [type, dispatch]);
+
+  if (!clothingTypes.includes(type)) {
+    return <NotFoundPage />;
+  }
 
   return (
     <div className="pt-6 bg-gradient-to-r from-cyan-200 to-cyan-500 flex flex-col grow">

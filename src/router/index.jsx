@@ -4,6 +4,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { Main } from "../components/Main";
 import Spinner from "../components/Spinner/Spinner";
 import { GoodsTypePage } from "../components/GoodsTypePage";
+import NotFoundPage from "../components/404/NotFoundPage";
 
 const WishList = React.lazy(() =>
   import("../components/WishList").then((module) => ({
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             <WishList />
           </Suspense>
         ),
+      },
+      {
+        path: "/clothing_store/*",
+        element: <NotFoundPage />,
       },
     ],
   },

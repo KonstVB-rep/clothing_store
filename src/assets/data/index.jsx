@@ -791,7 +791,7 @@ export const storeData = [
   },
 ];
 
-export const buttons = [
+export const clothingTypes = [
   "Hoodies",
   "Dresses",
   "Suits",
