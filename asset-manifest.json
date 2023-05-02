@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/clothing_store/static/css/main.8f027847.css",
-    "main.js": "/clothing_store/static/js/main.458d334e.js",
+    "main.css": "/clothing_store/static/css/main.7452cd83.css",
+    "main.js": "/clothing_store/static/js/main.21628e77.js",
     "static/js/860.bd2c49c6.chunk.js": "/clothing_store/static/js/860.bd2c49c6.chunk.js",
-    "static/js/878.c73c369c.chunk.js": "/clothing_store/static/js/878.c73c369c.chunk.js",
+    "static/js/878.5ef07958.chunk.js": "/clothing_store/static/js/878.5ef07958.chunk.js",
     "static/js/626.052f8d1b.chunk.js": "/clothing_store/static/js/626.052f8d1b.chunk.js",
-    "static/js/341.ad407d22.chunk.js": "/clothing_store/static/js/341.ad407d22.chunk.js",
+    "static/js/341.7135e0e9.chunk.js": "/clothing_store/static/js/341.7135e0e9.chunk.js",
     "static/media/bag4.webp": "/clothing_store/static/media/bag4.10f1db6bb7476cc540c2.webp",
     "static/media/shoe2.webp": "/clothing_store/static/media/shoe2.ae95b14f84bf208a52bc.webp",
     "static/media/jacket3.webp": "/clothing_store/static/media/jacket3.150aee40ca914cef0343.webp",
@@ -27,6 +27,7 @@
     "static/media/shoe8.webp": "/clothing_store/static/media/shoe8.554b6928119552599f2f.webp",
     "static/media/suit4.webp": "/clothing_store/static/media/suit4.b5d7121e9c1ce3ba433f.webp",
     "static/media/suit5.webp": "/clothing_store/static/media/suit5.af5e86003cf0c1299f9e.webp",
+    "static/media/404_limbo.webp": "/clothing_store/static/media/404_limbo.d902ee43c86a27cacd27.webp",
     "static/media/bag5.webp": "/clothing_store/static/media/bag5.dd20176bd6f4868075df.webp",
     "static/media/jeans5.webp": "/clothing_store/static/media/jeans5.2a39c3dff749277ff6c5.webp",
     "static/media/dress2.webp": "/clothing_store/static/media/dress2.9e8deb923b57046e773b.webp",
@@ -78,15 +79,15 @@
     "static/media/bag2.webp": "/clothing_store/static/media/bag2.6dfb446e36a52f83328d.webp",
     "static/media/logo.webp": "/clothing_store/static/media/logo.8d03d4959b81c669c253.webp",
     "index.html": "/clothing_store/index.html",
-    "main.8f027847.css.map": "/clothing_store/static/css/main.8f027847.css.map",
-    "main.458d334e.js.map": "/clothing_store/static/js/main.458d334e.js.map",
+    "main.7452cd83.css.map": "/clothing_store/static/css/main.7452cd83.css.map",
+    "main.21628e77.js.map": "/clothing_store/static/js/main.21628e77.js.map",
     "860.bd2c49c6.chunk.js.map": "/clothing_store/static/js/860.bd2c49c6.chunk.js.map",
-    "878.c73c369c.chunk.js.map": "/clothing_store/static/js/878.c73c369c.chunk.js.map",
+    "878.5ef07958.chunk.js.map": "/clothing_store/static/js/878.5ef07958.chunk.js.map",
     "626.052f8d1b.chunk.js.map": "/clothing_store/static/js/626.052f8d1b.chunk.js.map",
-    "341.ad407d22.chunk.js.map": "/clothing_store/static/js/341.ad407d22.chunk.js.map"
+    "341.7135e0e9.chunk.js.map": "/clothing_store/static/js/341.7135e0e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f027847.css",
-    "static/js/main.458d334e.js"
+    "static/css/main.7452cd83.css",
+    "static/js/main.21628e77.js"
   ]
 }

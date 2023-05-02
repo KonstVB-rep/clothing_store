@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkclothing_store=self.webpackChunkclothing_store||[]).push([[341],{8179:function(e,t,r){r.r(t),r.d(t,{NotFoundByFilters:function(){return n}});r(2791);var l=r(184),n=function(){return(0,l.jsx)("div",{className:"grow w-full h-full py-20 px-8",children:(0,l.jsx)("h1",{className:"w-full text-center font-bold text-4xl text-white flex items-center justify-center bg-black/60 p-4 rounded-3xl",children:"Sorry no products match your filter search ... Clear the filter and try again."})})}}}]);
-//# sourceMappingURL=341.ad407d22.chunk.js.map

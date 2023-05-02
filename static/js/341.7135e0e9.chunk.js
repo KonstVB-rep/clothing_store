@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkclothing_store=self.webpackChunkclothing_store||[]).push([[341],{8179:function(e,t,n){n.r(t),n.d(t,{NotFoundByFilters:function(){return l}});n(2791);var r=n(184),l=function(){return(0,r.jsx)("div",{className:"grow w-full h-full py-20 px-8",children:(0,r.jsx)("h1",{className:"w-full text-center font-bold text-4xl text-white flex items-center justify-center bg-black/60 p-4 rounded-3xl",children:"Nothing was found for your query... Clear the filter and try again."})})}}}]);
+//# sourceMappingURL=341.7135e0e9.chunk.js.map
