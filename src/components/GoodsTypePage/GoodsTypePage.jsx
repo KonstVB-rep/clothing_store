@@ -1,12 +1,8 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  filteredProductsType,
-  filteredProductByProps,
-} from "../../feature/slices/productsSlice";
+import { useDispatch } from "react-redux";
+import { filteredProductsType } from "../../feature/slices/productsSlice";
 import { FilterGoods } from "../FilterGoods";
-import { Spinner } from "../Spinner";
 import FiltersValue from "../FiltersValue/FiltersValue";
 import { clothingTypes } from "../../assets/data";
 import { NotFoundPage } from "../404";
@@ -17,16 +13,9 @@ const GoodsList = React.lazy(() =>
   }))
 );
 
-const NotFoundByFilters = React.lazy(() =>
-  import("../NotFoundByFilters").then((module) => ({
-    default: module.NotFoundByFilters,
-  }))
-);
-
 const GoodsTypePage = () => {
   const { type } = useParams();
 
-  const products = useSelector(filteredProductByProps);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -48,9 +37,7 @@ const GoodsTypePage = () => {
         <FilterGoods />
         <FiltersValue />
       </div>
-      <Suspense fallback={<Spinner />}>
-        {!products.length ? <NotFoundByFilters /> : <GoodsList />}
-      </Suspense>
+      <GoodsList />
     </div>
   );
 };

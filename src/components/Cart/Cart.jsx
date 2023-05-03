@@ -7,7 +7,9 @@ import { v4 as uuidv4 } from "uuid";
 
 const Cart = ({ openModal, setOpen }) => {
   const cart = useSelector((state) => state.cart.cart);
+
   const dispatch = useDispatch();
+
   const totalPrice = useSelector((state) => state.cart.totalPrice);
 
   return (

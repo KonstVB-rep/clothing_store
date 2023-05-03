@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { clearFilter } from "../../../feature/slices/productsSlice";
 import { useDispatch } from "react-redux";
@@ -21,15 +21,15 @@ const ButtonsNavigate = ({ back = false }) => {
             back
           </button>
         )}
-        {clothingTypes.map((button, index) => {
+        {clothingTypes.map((type, index) => {
           return (
             <Link
-              to={`/clothing_store/filter/${button}`}
+              to={`/clothing_store/filter/${type}`}
               key={index}
               onClick={() => dispatch(clearFilter())}
               className=" w-full bg-blue-700 flex justify-center items-center text-white w-24 px-0 py-4 hover:bg-white hover:text-black focus-visible:bg-white focus-visible:text-black duration-300 ease-in-out rounded-md h-10 active:border-2 active:border-cyan-50 active:bg-black active:text-white"
             >
-              {button}
+              {type}
             </Link>
           );
         })}
@@ -38,4 +38,4 @@ const ButtonsNavigate = ({ back = false }) => {
   );
 };
 
-export default ButtonsNavigate;
+export default memo(ButtonsNavigate);

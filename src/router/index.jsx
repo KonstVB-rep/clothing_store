@@ -3,8 +3,13 @@ import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
 import { Main } from "../components/Main";
 import Spinner from "../components/Spinner/Spinner";
-import { GoodsTypePage } from "../components/GoodsTypePage";
-import NotFoundPage from "../components/404/NotFoundPage";
+// import { GoodsTypePage } from "../components/GoodsTypePage";
+
+const GoodsTypePage = React.lazy(() =>
+  import("../components/GoodsTypePage").then((module) => ({
+    default: module.GoodsTypePage,
+  }))
+);
 
 const WishList = React.lazy(() =>
   import("../components/WishList").then((module) => ({
@@ -18,6 +23,12 @@ const SingleProductCard = React.lazy(() =>
   }))
 );
 
+const NotFoundPage = React.lazy(() =>
+  import("../components/404").then((module) => ({
+    default: module.NotFoundPage,
+  }))
+);
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -28,7 +39,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/clothing_store/filter/:type",
-        element: <GoodsTypePage />,
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <GoodsTypePage />
+          </Suspense>
+        ),
       },
       {
         path: "/clothing_store/filter/:type/:id",
@@ -48,7 +63,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/clothing_store/*",
-        element: <NotFoundPage />,
+        element: (
+          <Suspense fallback={<Spinner />}>
+            <NotFoundPage />
+          </Suspense>
+        ),
       },
     ],
   },

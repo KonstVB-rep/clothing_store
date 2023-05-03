@@ -9,10 +9,10 @@ const Header = () => {
   return (
     <>
       {pathname !== "/clothing_store" && (
-        <div>
+        <>
           <LogoWishCartLine />
           <ButtonsNavigate back={true} />
-        </div>
+        </>
       )}
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@material-tailwind/react";
 
 const btnClass =
-  "text-white w-full p-2 tex-center bg-blue-700 hover:bg-gray-300 hover:text-black focus-visible:bg-gray-300 focus-visible:text-black duration-200 ease-in-out active:bg-black active:text-white mobile:max-w-[120px]";
+  "text-white w-full p-2 tex-center bg-blue-700 hover:bg-gray-300 hover:text-black focus-visible:bg-gray-300 focus-visible:text-black duration-200 ease-in-out active:bg-black active:text-white mobile:max-w-[120px] min-h-[50px]";
 
 const actions = {
   onMouseDown: (e) => {
