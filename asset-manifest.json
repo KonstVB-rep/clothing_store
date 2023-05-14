@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/clothing_store/static/css/main.d8664e28.css",
-    "main.js": "/clothing_store/static/js/main.138f9d40.js",
+    "main.css": "/clothing_store/static/css/main.8b694f5a.css",
+    "main.js": "/clothing_store/static/js/main.d49c9427.js",
     "static/js/904.60a6a74d.chunk.js": "/clothing_store/static/js/904.60a6a74d.chunk.js",
     "static/js/860.bd2c49c6.chunk.js": "/clothing_store/static/js/860.bd2c49c6.chunk.js",
     "static/js/168.437a795e.chunk.js": "/clothing_store/static/js/168.437a795e.chunk.js",
     "static/js/239.8281c743.chunk.js": "/clothing_store/static/js/239.8281c743.chunk.js",
-    "static/js/366.49ded2d8.chunk.js": "/clothing_store/static/js/366.49ded2d8.chunk.js",
+    "static/js/366.739a0b86.chunk.js": "/clothing_store/static/js/366.739a0b86.chunk.js",
     "static/js/341.7135e0e9.chunk.js": "/clothing_store/static/js/341.7135e0e9.chunk.js",
     "static/media/bag4.webp": "/clothing_store/static/media/bag4.10f1db6bb7476cc540c2.webp",
     "static/media/shoe2.webp": "/clothing_store/static/media/shoe2.ae95b14f84bf208a52bc.webp",
@@ -81,17 +81,17 @@
     "static/media/bag2.webp": "/clothing_store/static/media/bag2.6dfb446e36a52f83328d.webp",
     "static/media/logo.webp": "/clothing_store/static/media/logo.8d03d4959b81c669c253.webp",
     "index.html": "/clothing_store/index.html",
-    "main.d8664e28.css.map": "/clothing_store/static/css/main.d8664e28.css.map",
-    "main.138f9d40.js.map": "/clothing_store/static/js/main.138f9d40.js.map",
+    "main.8b694f5a.css.map": "/clothing_store/static/css/main.8b694f5a.css.map",
+    "main.d49c9427.js.map": "/clothing_store/static/js/main.d49c9427.js.map",
     "904.60a6a74d.chunk.js.map": "/clothing_store/static/js/904.60a6a74d.chunk.js.map",
     "860.bd2c49c6.chunk.js.map": "/clothing_store/static/js/860.bd2c49c6.chunk.js.map",
     "168.437a795e.chunk.js.map": "/clothing_store/static/js/168.437a795e.chunk.js.map",
     "239.8281c743.chunk.js.map": "/clothing_store/static/js/239.8281c743.chunk.js.map",
-    "366.49ded2d8.chunk.js.map": "/clothing_store/static/js/366.49ded2d8.chunk.js.map",
+    "366.739a0b86.chunk.js.map": "/clothing_store/static/js/366.739a0b86.chunk.js.map",
     "341.7135e0e9.chunk.js.map": "/clothing_store/static/js/341.7135e0e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8664e28.css",
-    "static/js/main.138f9d40.js"
+    "static/css/main.8b694f5a.css",
+    "static/js/main.d49c9427.js"
   ]
 }
