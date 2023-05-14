@@ -16,7 +16,7 @@ const ButtonsNavigate = ({ back = false }) => {
         {back && (
           <button
             onClick={goBack}
-            className="flex justify-center items-center rounded-md text-black bg-gray-300 px-0 py-4 h-10 hover:scale-110 focus-visible:scale-110 duration-300 capitalize active:bg-transparent active:text-white"
+            className="flex justify-center items-center rounded-md text-black bg-gray-300 px-0 py-4 h-10 hover:scale-110 focus-visible:scale-110 duration-300 capitalize active:bg-transparent active:text-white cursor-pointer"
           >
             back
           </button>

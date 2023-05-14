@@ -12,6 +12,7 @@ const NotFoundByFilters = React.lazy(() =>
 
 const GoodsList = () => {
   const products = useSelector(filteredProductByProps);
+  console.log(products);
 
   return (
     <Suspense fallback={<Spinner />}>

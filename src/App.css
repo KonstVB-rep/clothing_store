@@ -19,3 +19,7 @@ ul{
 .active{
   background-color: indigo;
 }
+
+button{
+  cursor: pointer;
+}

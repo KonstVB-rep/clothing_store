@@ -72,11 +72,11 @@ const ProductMainCard = ({ product }) => {
       <CardFooter className="flex justify-center gap-7 pt-2">
         <ButtonGlobal
           title="add to cart"
-          onClick={() =>
+          onClick={() => {
             dispatch(
               addToCart({ ...product, size: defaultSize, color: defaultColor })
-            )
-          }
+            );
+          }}
         />
       </CardFooter>
     </Card>
