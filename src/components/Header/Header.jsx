@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <>
-      {pathname !== "https://konst1984.github.io/clothing_store/" && (
+      {pathname !== "/clothing_store/" && (
         <>
           <LogoWishCartLine />
           <ButtonsNavigate back={true} />
