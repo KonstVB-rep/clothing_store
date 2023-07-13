@@ -1,11 +1,13 @@
 import { useSelector } from "react-redux";
-import { selectTotalAmount } from "../../../feature/slices/cartSlice";
-import React, { useState } from "react";
+import { selectTotalAmount } from "feature/slices/cartSlice";
+import React, { useEffect, useState } from "react";
 import { Cart } from "../../Cart";
+import { useLocation } from "react-router-dom";
 
 const ShowCart = () => {
   const totalAmount = useSelector(selectTotalAmount);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
   const handleOpen = () => {
     setOpen(true);
@@ -13,6 +15,11 @@ const ShowCart = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
     <button
       className="flex flex-row items-center cursor-pointer pr-2 pl-1 rounded-2xl h-[50px]"

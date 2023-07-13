@@ -5,7 +5,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
+#root{
+	position: relative;
+}
+
 button, a {
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 }
+

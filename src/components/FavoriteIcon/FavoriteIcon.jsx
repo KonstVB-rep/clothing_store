@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectFavorites,
-  toggleFavorite,
-} from "../../feature/slices/productsSlice";
+import { selectFavorites, toggleFavorite } from "feature/slices/productsSlice";
 
 const FavoriteIcon = ({ tag = "button", currentProduct = {}, children }) => {
   const wishList = useSelector(selectFavorites);
@@ -41,14 +38,14 @@ const FavoriteIcon = ({ tag = "button", currentProduct = {}, children }) => {
     <>
       {tag === "link" ? (
         <Link
-          className="flex items-center justify-center h-full w-full pt-2 pb-2 gap-2 px-2 rounded-2xl"
-          to="clothing_store/wish_list"
+          className="flex items-center justify-center h-full w-full pt-2 pb-2 gap-2 px-2 rounded-2xl z-10"
+          to="/wish_list"
         >
           {iconHeart}
           {children}
         </Link>
       ) : (
-        <div className="absolute top-2 right-2 w-[40px] h-[40px] bg-white rounded-[50%]">
+        <div className="absolute top-8 left-8 w-[40px] h-[40px] bg-white rounded-[50%] z-10">
           <button
             className="flex items-center justify-center h-full w-full p-2 max-w-[50px] max-h-[50px] rounded-[50%] hover:scale-125 focus-visible:scale-125 active:scale-90 duration-200 outline-0"
             onClick={handleClick}

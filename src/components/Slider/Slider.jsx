@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { sliderData } from "../../assets/data";
+import { sliderData } from "assets/data";
 import {
   dotSlide,
   nextSlide,
@@ -8,7 +8,6 @@ import {
   selectCurrentSlide,
 } from "../../feature/slices/sliderSlice";
 import { Slide } from "./SliderSection";
-import { v4 as uuidv4 } from "uuid";
 
 const Slider = () => {
   const dispatch = useDispatch();
@@ -18,7 +17,7 @@ const Slider = () => {
     <div className="relative">
       <div className="bg-gray-900">
         {sliderData.map((item) => (
-          <Slide key={uuidv4()} {...item} />
+          <Slide key={item.id} {...item} />
         ))}
       </div>
       <div className="flex absolute bottom-12 w-full justify-center">

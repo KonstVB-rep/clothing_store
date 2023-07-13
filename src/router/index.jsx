@@ -1,76 +1,81 @@
 import React, { Suspense } from "react";
 import App from "../App";
 import { createBrowserRouter } from "react-router-dom";
-import { Main } from "../components/Main";
 import Spinner from "../components/Spinner/Spinner";
-// import { GoodsTypePage } from "../components/GoodsTypePage";
+import Main from "../pages/Main";
 
-const GoodsTypePage = React.lazy(() =>
-  import("../components/GoodsTypePage").then((module) => ({
-    default: module.GoodsTypePage,
+const GoodsType = React.lazy(() =>
+  import("../pages/GoodsType").then((module) => ({
+    default: module.default,
   }))
 );
 
 const WishList = React.lazy(() =>
-  import("../components/WishList").then((module) => ({
-    default: module.WishList,
+  import("../pages/WishList").then((module) => ({
+    default: module.default,
   }))
 );
 
-const SingleProductCard = React.lazy(() =>
-  import("../components/SingleProductCard").then((module) => ({
-    default: module.SingleProductCard,
+const SingleProduct = React.lazy(() =>
+  import("../pages/SingleProduct").then((module) => ({
+    default: module.default,
   }))
 );
 
-const NotFoundPage = React.lazy(() =>
-  import("../components/404").then((module) => ({
-    default: module.NotFoundPage,
+const NotFound = React.lazy(() =>
+  import("../pages/NotFound").then((module) => ({
+    default: module.default,
   }))
 );
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      children: [
+        {
+          path: "/",
+          element: <Main />,
+        },
+        {
+          path: "/filter/:type",
+          element: (
+            <Suspense fallback={<Spinner />}>
+              <GoodsType />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/filter/:type/:id",
+          element: (
+            <Suspense fallback={<Spinner />}>
+              <SingleProduct />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/wish_list",
+          element: (
+            <Suspense fallback={<Spinner />}>
+              <WishList />
+            </Suspense>
+          ),
+        },
+        {
+          path: "/*",
+          element: (
+            <Suspense fallback={<Spinner />}>
+              <NotFound />
+            </Suspense>
+          ),
+        },
+      ],
+    },
+  ],
   {
-    element: <App />,
-    children: [
-      {
-        path: "/clothing_store",
-        element: <Main />,
-      },
-      {
-        path: "/clothing_store/filter/:type",
-        element: (
-          <Suspense fallback={<Spinner />}>
-            <GoodsTypePage />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/clothing_store/filter/:type/:id",
-        element: (
-          <Suspense fallback={<Spinner />}>
-            <SingleProductCard />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/clothing_store/wish_list",
-        element: (
-          <Suspense fallback={<Spinner />}>
-            <WishList />
-          </Suspense>
-        ),
-      },
-      {
-        path: "/clothing_store/*",
-        element: (
-          <Suspense fallback={<Spinner />}>
-            <NotFoundPage />
-          </Suspense>
-        ),
-      },
-    ],
-  },
-]);
+    basename: "/clothing_store",
+  }
+);
 
 export default router;

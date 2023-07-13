@@ -25,6 +25,8 @@ Used by the library:
     -@reduxjs/toolkit;
     -redux-persist;
     -@material-tailwind/react;
+    -react-icons;
+    -antd;
 
 
 

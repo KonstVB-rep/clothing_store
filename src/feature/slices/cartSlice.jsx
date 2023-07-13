@@ -63,6 +63,7 @@ export const cartSlice = createSlice({
     clearCart: (state) => {
       state.cart = [];
       state.totalAmount = 0;
+      state.totalPrice = 0;
     },
     removeEntireProduct: (state, action) => {
       state.cart = state.cart.filter(

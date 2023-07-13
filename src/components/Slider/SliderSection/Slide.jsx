@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { selectCurrentSlide } from "../../../feature/slices/sliderSlice";
+import { selectCurrentSlide } from "feature/slices/sliderSlice";
 
 const Slide = ({ id, img, text }) => {
   const slideIndex = useSelector(selectCurrentSlide);

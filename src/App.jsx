@@ -4,6 +4,7 @@ import React from "react";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import ArrowUp from "./components/Buttons/ArrowUp/ArrowUp";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <ScrollToTop>
         <Outlet />
       </ScrollToTop>
+      <ArrowUp />
       <Footer />
     </div>
   );

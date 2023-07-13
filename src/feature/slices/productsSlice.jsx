@@ -24,6 +24,9 @@ export const productsSlice = createSlice({
     clearFilter: (state) => {
       state.filters = {};
     },
+    clearFavoritesList: (state) => {
+      state.favoritesProducts = [];
+    },
     sortByPrice: (state, action) => {
       if (action.payload === "asc") {
         state.filteredProductsType.sort((a, b) => a.price - b.price);
@@ -67,6 +70,7 @@ export const {
   filterProductProps,
   sortByPrice,
   clearFilter,
+  clearFavoritesList,
 } = productsSlice.actions;
 
 export const selectSingleProduct = (state) => state.products.singleProduct[0];

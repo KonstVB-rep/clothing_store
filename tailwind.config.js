@@ -17,6 +17,7 @@ module.exports = withMT({
         300: "repeat(auto-fit, minmax(240px, 300px))",
         main: "repeat(auto-fit, minmax(240px, 1fr))",
         nav: "repeat(auto-fit,minmax(90px, 1fr))",
+        main_lg: "repeat(4, 1fr);",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

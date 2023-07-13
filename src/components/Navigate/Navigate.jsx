@@ -1,5 +1,5 @@
 import React from "react";
-import clothes from "../../assets/images/clothes.webp";
+import clothes from "assets/images/clothes.webp";
 import { ButtonsNavigate } from "../Buttons/ButtonsNavigate";
 
 const Navigate = () => {
