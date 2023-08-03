@@ -10,6 +10,10 @@ In the project directory, you can run:
 
 ### `npm start`
 
+directory <i>./server  
+
+### `npm start`
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -26,6 +30,7 @@ Used by the library:
     -redux-persist;
     -@material-tailwind/react;
     -react-icons;
+    -react-stripe-checkout;
     -antd;
 
 
@@ -37,3 +42,9 @@ Used by the library:
 ![image](src/assets/images/TypePage.webp)
 
 ![image](src/assets/images/SinglePage.webp)
+
+![image](src/assets/images/Cart.webp)
+
+![image](src/assets/images/CartWithStripe.webp)
+
+

@@ -23,3 +23,32 @@ ul{
 button{
   cursor: pointer;
 }
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #7B8182;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #A4AAAC;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #A4AAAC;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: steelblue;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: steelblue;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: rgb(25, 118, 210);
+}

@@ -11,7 +11,7 @@ const CartList = () => {
 
   return (
     <>
-      <div className="mt-2 px-4 grid w-full gap-4">
+      <div className="mt-2 px-4 grid w-full gap-4 max-h-[65vh] overflow-y-auto">
         {cart.map((item, index) => {
           return <CartItem key={item.img + index} product={item} />;
         })}
