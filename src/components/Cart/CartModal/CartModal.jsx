@@ -15,7 +15,7 @@ const CartModal = ({ setOpen, children }) => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <Dialog.Panel className=" w-full relative max-w-[1000px] transform overflow-hidden rounded-2xl bg-white pt-10 text-left align-middle shadow-xl transition-all">
+          <Dialog.Panel className=" w-full max-h-[87vh] relative max-w-[1000px] transform overflow-hidden rounded-2xl bg-white pt-10 text-left align-middle shadow-xl transition-all">
             <button
               className="absolute top-0 right-0 cursor-pointer hover:scale-125 focus-visible:scale-125 duration-300 w-[45px] h-[45px] outline-0 bg-white rounded-[50%]"
               onClick={setOpen}

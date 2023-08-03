@@ -61,7 +61,7 @@ const CartItem = memo(({ product }) => {
                 <span className="ml-2 font-medium">{totalPrice}$</span>
               </p>
             </div>
-            <div className="flex flex-wrap justify-between w-full">
+            <div className="flex flex-col flex-wrap items-center mobile_350:flex-row mobile_350:justify-between w-full">
               <div className="flex gap-4 items-center">
                 <button
                   className="font-semibold text-2xl w-12 h-12 p-2 hover:scale-125 focus-visible:scale-125 active:scale-90 duration-200"
