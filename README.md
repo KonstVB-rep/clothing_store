@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project [Demo](https://konst1984.github.io/clothing_store).
+This project [Demo](https://konstvb-rep.github.io/clothing_store).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
